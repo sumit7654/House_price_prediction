@@ -9,7 +9,7 @@ import pandas as pd
 model = joblib.load("house_price_model.pkl")
 features = joblib.load("model_features.pkl")
 
-st.title("🏠 House Price Prediction App")
+st.title("House Price Prediction App")
 
 # User input fields
 def user_input():
@@ -45,4 +45,4 @@ prediction = model.predict(input_data)
 price = np.expm1(prediction)[0]  # reverse log1p()
 price_in_inr = price * 84.5
 
-st.subheader(f"💰 Estimated House Price: **₹{price_in_inr:,.0f}**")
+st.subheader(f" Estimated House Price: **₹{price_in_inr:,.0f}**")
